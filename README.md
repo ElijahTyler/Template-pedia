@@ -1,6 +1,6 @@
 # Template-pedia
 
-a Python-based web scraper / compiler framework for Windows and Linux
+a Python-based web scraper -> data compiler framework for Windows + Linux
 
 ## Installation
 
@@ -20,7 +20,7 @@ IMPORTANT: Open `main.py` and add your personal website search URLs (example is 
 
 Open Terminal in the project directory and type `python main.py`. This will open an automated Firefox window that will scrape your given webpage for all listings of your chosen element. Then, a TemplateListing object is created for each listing it finds. Lastly, `listings.json` will be created, a dictionary of all listings found.
 
-TemplateData.py is used to create a .csv file with all of your listings. To do so, open Python in your terminal with `/bin/python3` and run the following commands:
+TemplateData.py is used to create a .csv file with all of your listings. To do so, open Python in your terminal and run the following commands:
 
 ```python
 from TemplateData import TemplateData
