@@ -10,7 +10,7 @@ a Python-based web scraper -> data compiler framework for Windows + Linux
 
 ## Setup
 
-1. main.py : Anywhere you see the word "template" is where you add your own URL, class name, variable name etc.
+1. main.py : Change the CURRENT_CLASS variable to the class name of the element you are searching for. The default search method is by class. Alternatively, you can search by xpath (example is in main.py) for your chosen element.
 2. TemplateListings.py : You can declare as many attributes as you see fit for whatever data you're scraping. The file comes preloaded with three slots.
 3. TemplateData.py : Make sure that your attributes in TemplateListings.py are all accounted for when creating a TemplateData object.
 

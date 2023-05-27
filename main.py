@@ -1,5 +1,6 @@
 from selenium import webdriver
 from selenium.webdriver import FirefoxOptions
+from selenium.webdriver.common.by import By
 
 from TemplateListings import TemplateListings
 
@@ -50,6 +51,7 @@ def main(url_list):
             time.sleep(1)
             html = driver.execute_script("return document.documentElement.outerHTML")
             soup = BeautifulSoup(html, 'html.parser')
+            # to search by xpath: soup.find_all(xpath='//*[@id="template-id-name"]')
             entries = soup.find_all(attrs={"class": CURRENT_CLASS})
             timeout += 1
             if timeout > 10:
@@ -78,9 +80,10 @@ def main(url_list):
     print(f"Time taken: {total_time} seconds")
 
 if __name__ == "__main__":
-    # step 1: Go to template.website
-    # step 2: Set your search parameters
-    # step 3: Copy the urls FOR EACH INDIVIDUAL PAGE and paste it here
+    # step 1: Set CURRENT_CLASS to the class name you're searching for
+    # step 2: Go to template.website
+    # step 3: Set your search parameters
+    # step 4: Copy the urls FOR EACH INDIVIDUAL PAGE and paste it here
     # aside: r"" (raw string) eliminates the need to escape the backslashes
 
     # example setup:
