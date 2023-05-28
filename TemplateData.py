@@ -13,9 +13,9 @@ class TemplateData:
             self.data = json.load(f)
             for t in self.data:
                 template = self.data[t]
-                self.years.append(template["attr1"])
-                self.makes.append(template["attr2"])
-                self.models.append(template["attr3"])
+                self.attr1s.append(template["attr1"])
+                self.attr2s.append(template["attr2"])
+                self.attr3s.append(template["attr3"])
 
     def generate_csv(self, name = None):
         if not name:
